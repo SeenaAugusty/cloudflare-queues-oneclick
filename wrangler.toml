@@ -1,5 +1,5 @@
 
-name = "clarity-logs-worker"
+name = "cloudflare-queues-oneclick"
 main = "src/index.js"
 compatibility_date = "2025-10-01"
 
