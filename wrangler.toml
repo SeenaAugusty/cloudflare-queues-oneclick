@@ -1,0 +1,16 @@
+
+name = "clarity-logs-worker"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+
+[vars]
+INGEST_ENDPOINT = ""
+
+[queues.producers]
+binding = "LOGS_QUEUE"
+queue = "logs-queue"
+
+[queues.consumers]
+queue = "logs-queue"
+max_batch_size = 100          # Max allowed
+max_batch_timeout = 30        # Wait longer to fill batch (up to 60 seconds)
