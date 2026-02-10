@@ -40,8 +40,8 @@ export default {
     let originResp = await fetch(request, cacheBypass)
       .catch(() => new Response("OK", { status: 200 }));
 
-    // Still respond with OK for logging-only setups
-    return new Response('OK', { status: 200 });
+    // Still respond with origin response
+    return originResp;
   },
 
   async queue(batch, env, ctx) {
